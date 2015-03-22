@@ -1,0 +1,27 @@
+subprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = "1.7"
+    targetCompatibility = "1.7"
+
+    configurations.compile.transitive = true
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile     "org.slf4j:slf4j-api:1.7.6"
+        compile     "org.slf4j:slf4j-log4j12:1.7.6"
+    }
+}
+
+project(':neo4jam') {
+    apply plugin: 'application'
+    mainClassName = 'com.ideacandi.Neo4Jam'
+
+    dependencies {
+        compile   "org.neo4j:neo4j:2.2.0-RC01"
+        compile   "joda-time:joda-time:2.7"
+    }
+}
