@@ -19,3 +19,4 @@ $ ./neo4jam/build/install/neo4jam/bin/neo4jam <algo> <graph_file>
 $ ./neo4jam/build/install/neo4jam/bin/neo4jam ba graph.db
 ```
 
+
